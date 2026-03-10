@@ -135,7 +135,10 @@ function App() {
         {page === 'market' && (
           <div className="hero">
             <h1>Market <span>Overview</span></h1>
-            <p>Stay updated with real-time prices, trends, and detailed insights for over 100+ top-tier digital assets.</p>
+            <p>Stay updated with real-time prices, trends, and detailed insights for over 100+ top-tier digital assets.
+              <br>Developed by Shoban Murli</br>
+            </p>
+            
           </div>
         )}
         {page === 'watchlist' && (
