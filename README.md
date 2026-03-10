@@ -109,5 +109,7 @@ service cloud.firestore {
 | `Esc` | Close search |
 
 
-![Crypto Tracker Screenshot](Screenshot 2026-03-10 232129.png)
-![Chart Screenshot](Screenshot 2026-03-10 232325.png)
+## Project Screenshot
+
+![Crypto Tracker Screenshot](images/Screenshot 2026-03-10 231612.png)
+![Chart Screenshot](images/Screenshot 2026-03-10 233513.png)
