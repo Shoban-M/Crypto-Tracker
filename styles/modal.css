@@ -1,0 +1,29 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   styles/modal.css
+   Shared modal backdrop · CoinModal layout · stats grid
+   ───────────────────────────────────────────────────────────────────────────── */
+
+/* ── Backdrop ── */
+.modal-backdrop  { position: fixed; inset: 0; background: rgba(0,0,0,0.75); backdrop-filter: blur(8px); z-index: 200; display: flex; align-items: center; justify-content: center; padding: 16px; }
+
+/* ── Modal box ── */
+.modal           { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 28px; width: 700px; max-width: 100%; max-height: 90vh; overflow-y: auto; position: relative; }
+.modal-close     { position: absolute; top: 16px; right: 16px; background: var(--surface2); border: none; color: var(--muted); width: 30px; height: 30px; border-radius: 8px; cursor: pointer; font-size: 14px; }
+.modal-close:hover { color: var(--text); }
+
+/* ── Coin header ── */
+.modal-coin-header   { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
+.modal-coin-img      { width: 48px; height: 48px; border-radius: 50%; }
+.modal-coin-name     { font-size: 22px; font-weight: 800; }
+.modal-rank          { font-size: 12px; color: var(--muted); margin-top: 2px; }
+.modal-price         { font-size: 34px; font-weight: 800; letter-spacing: -1px; margin-bottom: 6px; }
+
+/* ── Stats grid ── */
+.modal-stats         { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin: 20px 0; }
+.modal-stat          { background: var(--surface2); border-radius: 10px; padding: 14px; }
+.modal-stat-label    { font-size: 10px; color: var(--muted); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
+.modal-stat-value    { font-size: 14px; font-weight: 700; }
+
+@media (max-width: 768px) {
+  .modal-stats { grid-template-columns: repeat(2,1fr); }
+}

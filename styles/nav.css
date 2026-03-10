@@ -1,0 +1,48 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   styles/nav.css
+   Sticky top navbar · logo · currency selector · live badge · user chip
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.nav {
+  display:       flex;
+  align-items:   center;
+  gap:           16px;
+  padding:       0 28px;
+  height:        60px;
+  background:    var(--surface);
+  border-bottom: 1px solid var(--border);
+  position:      sticky;
+  top:           0;
+  z-index:       100;
+}
+
+/* ── Logo ── */
+.nav-logo         { display: flex; align-items: center; gap: 8px; font-size: 18px; font-weight: 800; color: var(--text); text-decoration: none; flex-shrink: 0; }
+.nav-logo-icon    { width: 32px; height: 32px; border-radius: 8px; background: linear-gradient(135deg, var(--accent), var(--accent2)); display: flex; align-items: center; justify-content: center; font-size: 16px; }
+.nav-logo span    { color: var(--accent); }
+
+.nav-spacer { flex: 1; }
+
+/* ── Nav buttons ── */
+.nav-btn                { display: flex; align-items: center; gap: 6px; padding: 7px 16px; border-radius: 8px; font-family: inherit; font-weight: 600; font-size: 13px; cursor: pointer; border: none; transition: all 0.2s; }
+.nav-btn-ghost          { background: none; color: var(--muted); border: 1px solid var(--border); }
+.nav-btn-ghost:hover    { color: var(--text); border-color: rgba(255,255,255,0.2); }
+.nav-btn-ghost.active   { color: var(--accent); border-color: var(--accent); background: rgba(42,245,176,0.08); }
+.nav-btn-primary        { background: var(--accent); color: #0a0e1a; font-weight: 700; }
+.nav-btn-primary:hover  { background: #1fdda0; }
+
+/* ── Live badge ── */
+.live-badge  { display: flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 700; color: var(--accent); background: rgba(42,245,176,0.08); border: 1px solid rgba(42,245,176,0.2); padding: 4px 10px; border-radius: 100px; letter-spacing: 0.5px; }
+.live-dot    { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: pulse 2s ease-in-out infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+/* ── User chip ── */
+.user-chip   { display: flex; align-items: center; gap: 8px; background: var(--surface2); border: 1px solid var(--border); border-radius: 100px; padding: 5px 12px 5px 6px; font-size: 13px; font-weight: 600; }
+.user-avatar { width: 24px; height: 24px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent2)); display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 800; color: #0a0e1a; }
+
+/* ── Currency selector ── */
+.currency-selector  { display: flex; align-items: center; background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; flex-shrink: 0; }
+.currency-btn       { padding: 7px 14px; background: none; border: none; font-family: inherit; font-size: 13px; font-weight: 700; color: var(--muted); cursor: pointer; transition: all 0.18s; display: flex; align-items: center; gap: 5px; }
+.currency-btn:hover { color: var(--text); background: rgba(255,255,255,0.05); }
+.currency-btn.active{ background: var(--accent); color: #0a0e1a; }
+.currency-divider   { width: 1px; height: 20px; background: var(--border); }

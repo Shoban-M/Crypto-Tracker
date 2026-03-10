@@ -1,0 +1,42 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   styles/cards.css
+   Coin card grid · card internals · star button · price tags
+   ───────────────────────────────────────────────────────────────────────────── */
+
+/* ── Grid ── */
+.coin-grid {
+  display:               grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap:                   14px;
+}
+
+/* ── Card ── */
+.coin-card       { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 18px; cursor: pointer; transition: all 0.2s; position: relative; }
+.coin-card:hover { border-color: rgba(255,255,255,0.15); transform: translateY(-2px); background: #1e2130; }
+
+/* ── Card top row ── */
+.coin-card-top      { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 14px; }
+.coin-card-identity { display: flex; align-items: center; gap: 10px; }
+.coin-card-img      { width: 36px; height: 36px; border-radius: 50%; }
+.coin-card-symbol   { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+.coin-card-name     { font-size: 14px; font-weight: 700; color: var(--text); margin-top: 1px; }
+
+/* ── Star / watchlist button ── */
+.star-btn        { background: none; border: none; cursor: pointer; color: var(--muted); font-size: 18px; line-height: 1; transition: all 0.2s; padding: 2px; }
+.star-btn:hover  { color: var(--gold); transform: scale(1.2); }
+.star-btn.active { color: var(--gold); }
+
+/* ── Price + change ── */
+.coin-card-price  { font-size: 24px; font-weight: 800; margin-bottom: 6px; letter-spacing: -0.5px; }
+.change-tag       { display: inline-flex; align-items: center; gap: 3px; font-size: 12px; font-weight: 700; }
+.change-tag.up    { color: var(--accent); }
+.change-tag.down  { color: var(--red); }
+
+/* ── Bottom meta row ── */
+.coin-card-meta      { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; }
+.meta-item           { font-size: 11px; color: var(--muted); }
+.meta-item span      { display: block; color: var(--text); font-size: 12px; font-weight: 600; margin-top: 2px; }
+
+@media (max-width: 768px) {
+  .coin-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+}

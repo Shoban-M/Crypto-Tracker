@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CoinPulse — Live Crypto Tracker</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Styles (order matters — base first, components after) -->
+  <link rel="stylesheet" href="styles/variables.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/nav.css">
+  <link rel="stylesheet" href="styles/cards.css">
+  <link rel="stylesheet" href="styles/modal.css">
+  <link rel="stylesheet" href="styles/chart.css">
+  <link rel="stylesheet" href="styles/search.css">
+  <link rel="stylesheet" href="styles/auth.css">
+
+  <!-- React + Babel (CDN — no build step needed) -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- Chart.js + zoom/pan plugin -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@2.0.1/dist/chartjs-plugin-zoom.min.js"></script>
+
+  <!-- Firebase SDK (ES module — exposes window._firebase for Babel scripts) -->
+  <script type="module" src="src/firebase/loader.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!--
+    Load order is critical. Babel scripts share a global scope so:
+      1. utils   — globals like `fmt`, `CURRENCIES`, `getFirebase`
+      2. leaf components — Sparkline, PriceChart, CoinCard, CoinModal, SearchBar, AuthModal
+      3. App     — root component that references all of the above
+  -->
+  <script type="text/babel" src="src/utils/firebase.utils.js"></script>
+  <script type="text/babel" src="src/utils/formatters.js"></script>
+
+  <script type="text/babel" src="src/components/Sparkline.jsx"></script>
+  <script type="text/babel" src="src/components/PriceChart.jsx"></script>
+  <script type="text/babel" src="src/components/CoinCard.jsx"></script>
+  <script type="text/babel" src="src/components/CoinModal.jsx"></script>
+  <script type="text/babel" src="src/components/SearchBar.jsx"></script>
+  <script type="text/babel" src="src/components/AuthModal.jsx"></script>
+
+  <script type="text/babel" src="src/App.jsx"></script>
+</body>
+</html>

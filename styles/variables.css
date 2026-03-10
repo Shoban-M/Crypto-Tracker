@@ -1,0 +1,24 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   styles/variables.css
+   Single source of truth for every design token used in the app.
+   ───────────────────────────────────────────────────────────────────────────── */
+
+:root {
+  /* Background layers */
+  --bg:       #0f1117;
+  --surface:  #1a1d27;
+  --surface2: #22263a;
+
+  /* Borders */
+  --border: rgba(255, 255, 255, 0.07);
+
+  /* Brand colours */
+  --accent:  #2af5b0;   /* green — positive / primary */
+  --accent2: #1ec6ff;   /* blue  — gradients          */
+  --red:     #ff4d6a;   /* red   — negative / danger  */
+  --gold:    #f5c842;   /* gold  — watchlist star      */
+
+  /* Text */
+  --text:  #e8edf5;
+  --muted: #7a8399;
+}

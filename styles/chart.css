@@ -1,0 +1,26 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   styles/chart.css
+   PriceChart container · time-range buttons · period stats bar · hint text
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.chart-container  { background: var(--surface2); border-radius: 14px; padding: 20px; margin-top: 16px; }
+.chart-title      { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 1.2px; }
+
+/* ── Time-range buttons ── */
+.time-btns       { display: flex; gap: 4px; }
+.time-btn        { background: none; border: 1px solid var(--border); color: var(--muted); font-family: inherit; font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 6px; cursor: pointer; transition: all 0.18s; }
+.time-btn.active { border-color: var(--accent); color: var(--accent); background: rgba(42,245,176,0.08); }
+.time-btn:hover  { border-color: rgba(255,255,255,0.2); color: var(--text); }
+
+/* ── Reset zoom ── */
+.reset-zoom-btn  { background: rgba(0,245,160,0.1); border: 1px solid rgba(0,245,160,0.3); color: #00f5a0; font-family: 'Space Mono', monospace; font-size: 10px; padding: 4px 10px; border-radius: 6px; cursor: pointer; }
+
+/* ── Period stats bar ── */
+.chart-stats-bar       { display: flex; margin-top: 16px; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 14px; }
+.chart-stat-item       { flex: 1; text-align: center; }
+.chart-stat-item + .chart-stat-item { border-left: 1px solid rgba(255,255,255,0.06); }
+.chart-stat-label      { font-size: 10px; color: #6b7a99; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
+.chart-stat-value      { font-family: 'Space Mono', monospace; font-size: 13px; font-weight: 700; }
+
+/* ── Hover hint ── */
+.chart-hint { text-align: center; margin-top: 10px; font-size: 10px; color: rgba(107,122,153,0.6); font-family: 'Space Mono', monospace; }
