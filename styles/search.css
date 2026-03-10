@@ -43,3 +43,24 @@
 .search-hint     { padding: 8px 14px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border); background: rgba(255,255,255,0.02); }
 .search-hint-key { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; color: var(--muted); }
 .kbd             { background: var(--surface2); border: 1px solid var(--border); border-radius: 4px; padding: 1px 6px; font-size: 10px; font-weight: 700; color: var(--text); font-family: monospace; }
+
+
+/* ── Responsive Search ── */
+@media (max-width: 768px) {
+  .search-bar input {
+    width: 100%;
+    font-size: 1rem; /* prevents iOS auto-zoom on focus */
+  }
+
+  .search-dropdown {
+    position: fixed; /* break out of navbar */
+    top: auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-height: 60vh;
+    overflow-y: auto;
+    border-radius: 0 0 1rem 1rem;
+    z-index: 9999;
+  }
+}

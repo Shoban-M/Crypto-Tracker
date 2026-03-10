@@ -85,3 +85,25 @@ body {
   .hero h1    { font-size: 22px; }
   .stat-row   { gap: 10px; }
 }
+
+/* ── Responsive Base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.app-container, main, .content-wrapper {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px; /* scales all rem units down */
+  }
+}

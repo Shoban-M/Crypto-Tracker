@@ -46,3 +46,27 @@
 .currency-btn:hover { color: var(--text); background: rgba(255,255,255,0.05); }
 .currency-btn.active{ background: var(--accent); color: #0a0e1a; }
 .currency-divider   { width: 1px; height: 20px; background: var(--border); }
+
+
+/* ── Responsive Navbar ── */
+@media (max-width: 768px) {
+  nav, .navbar {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .navbar .logo {
+    font-size: 1.1rem;
+  }
+
+  /* Stack search below logo on very small screens */
+  .navbar .search-wrapper {
+    order: 3;
+    width: 100%;
+  }
+
+  .navbar .currency-selector {
+    margin-left: auto;
+  }
+}

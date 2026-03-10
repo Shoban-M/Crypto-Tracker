@@ -27,3 +27,22 @@
 /* ── Mode toggle link ── */
 .auth-switch        { text-align: center; margin-top: 18px; font-size: 13px; color: var(--muted); }
 .auth-switch button { background: none; border: none; color: var(--accent); font-family: inherit; font-weight: 700; cursor: pointer; }
+
+/* ── Responsive Auth Modal ── */
+@media (max-width: 480px) {
+  .auth-modal {
+    width: 95vw;
+    padding: 1.5rem 1rem;
+    border-radius: 0.75rem;
+  }
+
+  .auth-modal input {
+    font-size: 1rem; /* prevent iOS zoom */
+    width: 100%;
+  }
+
+  .google-btn, .auth-submit-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
