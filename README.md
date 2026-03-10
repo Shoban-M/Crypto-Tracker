@@ -107,3 +107,7 @@ service cloud.firestore {
 | `↑` / `↓` | Navigate results |
 | `Enter` | Open coin detail |
 | `Esc` | Close search |
+
+
+![Crypto Tracker Screenshot](Screenshot 2026-03-10 232129.png)
+![Chart Screenshot](Screenshot 2026-03-10 232325.png)
