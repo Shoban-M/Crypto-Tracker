@@ -108,5 +108,5 @@ service cloud.firestore {
 | `Enter` | Open coin detail |
 | `Esc` | Close search |
 
-
+You can access the website using - https://crypto-tracker-three-beta.vercel.app/
 
